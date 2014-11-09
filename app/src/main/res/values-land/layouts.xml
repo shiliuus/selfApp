@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="activity_main" type="layout">@layout/activity_main_narrow</item>
+    <item name="activity_main" type="layout">@layout/activity_main_land</item>
+    <item name="activity_casestudy" type="layout">@layout/activity_casestudy_land</item>
+    <item name="fragment_case_overview" type="layout">@layout/fragment_case_overview_land</item>
 </resources>
