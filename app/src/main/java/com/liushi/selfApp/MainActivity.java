@@ -51,20 +51,29 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Intent intent;
+
         switch (position) {
             case 0:
-                intent = new Intent(MainActivity.this, DriveActivity.class);
+                Intent intent;
+//                intent = new Intent(MainActivity.this, DriveActivity.class);
+                intent = this.getPackageManager().getLaunchIntentForPackage("com.google.android.apps.docs");
                 startActivity(intent);
+                break;
             case 1:
-                intent = new Intent(MainActivity.this, MapActivity.class);
-                startActivity(intent);
+                Intent intent1;
+                intent1 = new Intent(MainActivity.this, MapActivity.class);
+                startActivity(intent1);
+                break;
             case 2:
-                intent = new Intent(MainActivity.this, CrawlerActivity.class);
-                startActivity(intent);
+                Intent intent2;
+                intent2 = new Intent(MainActivity.this, CrawlerActivity.class);
+                startActivity(intent2);
+                break;
             case 3:
-                intent = new Intent(MainActivity.this, CaseStudyActivity.class);
-                startActivity(intent);
+                Intent intent3;
+                intent3 = new Intent(MainActivity.this, CaseStudyActivity.class);
+                startActivity(intent3);
+                break;
             default:
         }
     }
