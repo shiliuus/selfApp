@@ -33,6 +33,7 @@ public class CrawlerActivity extends Activity implements View.OnClickListener, A
     private CrawlerTask mTask;
     private String keyword;
     private final static String link = "http://www.meetqun.com/forum-36-1.html";
+    private final static String link2 = "http://www.meetqun.com/";
     private URL url;
     private ArrayList<ListItem> list;
     private ListViewAdapter mListViewAdapter;
@@ -69,7 +70,7 @@ public class CrawlerActivity extends Activity implements View.OnClickListener, A
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         Intent intent = new Intent();
-        intent.putExtra("link", link + list.get(i).getDesc());
+        intent.putExtra("link", link2 + list.get(i).getDesc());
         intent.setClass(CrawlerActivity.this, WebViewActivity.class);
         startActivity(intent);
     }

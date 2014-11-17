@@ -20,23 +20,6 @@ import org.jsoup.select.Elements;
  */
 public class CrawlerHelper {
 
-    private final static String link1 = "http://www.google.com/cse?cx=partner-pub-2645088012817067%3A9812473835&ie=UTF-8&q=";
-    private final static String link2 = "&sa=Search&siteurl=www.google.com%2Fcse%2Fhome%3Fcx%3Dpartner-pub-2645088012817067%3A9812473835&ref=www.google.com%2Fcse%3Fcx%3Dpartner-pub-2645088012817067%253A9812473835%26ie%3DUTF-8%26q%3Dgoogle&ss=806j110990j7#gsc.tab=0&gsc.q=";
-    private	final static String link3 = "&gsc.page=1";
-
-    public static URL getURL(String keyword) {
-        URL url = null;
-        keyword = keyword.replace(" ", "%20");
-        String urlStr = link1 + keyword + link2 + keyword + link3;
-        try {
-            url = new URL(urlStr);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-        return url;
-    }
-
-
     public static String getPageContent(URL url) {
         String pageContent = "";
         try {
@@ -74,10 +57,9 @@ public class CrawlerHelper {
             String desc = element.getElementsByAttributeValue("class", "s xst").attr("href");
 
             try {
-                title = new String(title.getBytes("UTF-8"), "ISO-8859-1");
-                title = new String(title.getBytes("ISO-8859-1"), "UTF-8");
-                desc = new String(desc.getBytes("UTF-8"), "ISO-8859-1");
-                desc = new String(desc.getBytes("ISO-8859-1"), "UTF-8");
+                title = new String(title.getBytes(), "GB2312");
+//                title = new String(title.getBytes("UTF-8"), "ISO-8859-1");
+//                title = new String(title.getBytes("ISO-8859-1"), "UTF-8");
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             }
