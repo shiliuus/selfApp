@@ -42,12 +42,19 @@
                 android:value="com.liushi.selfApp.MainActivity" />
             </activity>
 
-        <activity android:name="crawler.CrawlerActivity"
+        <activity android:name="crawler.WebViewActivity"
             android:label="@string/crawler_activity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.liushi.selfApp.MainActivity" />
             </activity>
+
+        <activity android:name="crawler.CrawlerActivity"
+            android:label="@string/crawler_activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.liushi.selfApp.MainActivity" />
+        </activity>
 
         <activity android:name="casestudy.CaseActivity"
             android:label="@string/case_activity">

@@ -11,6 +11,8 @@
     <string name="drive_activity">Drive</string>
     <string name="case_study_activity">CaseStudyActivity</string>
 
+    <string name="btn_str">Fetch the newest posts</string>
+
     <!-- Address format -->
     <string name="address_output_string">%1$s %2$s %3$s</string>
 
