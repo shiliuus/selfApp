@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
@@ -29,6 +30,7 @@ import java.util.List;
 public class CrawlerActivity extends Activity implements View.OnClickListener, AdapterView.OnItemClickListener {
     private Button mBtn;
     private ListView mLv;
+    private ImageView mImg;
     private ProgressBar mProgressBar;
     private CrawlerTask mTask;
     private String keyword;
@@ -48,6 +50,7 @@ public class CrawlerActivity extends Activity implements View.OnClickListener, A
         mProgressBar = (ProgressBar) findViewById(R.id.crawler_progress_bar);
         mLv = (ListView) findViewById(R.id.crawler_listview);
         mContext = this.getApplicationContext();
+
 
         mBtn.setOnClickListener(this);
         mLv.setOnItemClickListener(this);

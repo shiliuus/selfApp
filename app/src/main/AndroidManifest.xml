@@ -74,7 +74,7 @@
                    android:value="@integer/google_play_services_version" />
 
         <meta-data android:name="com.google.android.maps.v2.API_KEY"
-                   android:value="AIzaSyAZA1HpFr1JGi6loY9bxSV4xkR3aF6CFzg" />
+                   android:value="AIzaSyC7GlWB7Tl1cetZfvuhCefrH1HPDcP5APo" />
 
 
     </application>

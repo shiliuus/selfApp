@@ -49,9 +49,11 @@ public class ListViewAdapter extends BaseAdapter {
             listView = new View(mContext);
             listView = inflater.inflate(R.layout.list_item, null);
 
+            ImageView imgView = (ImageView) listView.findViewById(R.id.listitem_img);
             TextView titleView = (TextView) listView.findViewById(R.id.listitem_title);
             TextView descView = (TextView) listView.findViewById(R.id.listitem_desc);
 
+            imgView.setImageBitmap(list.get(position).getImg());
             titleView.setText(list.get(position).getTitle());
             descView.setText(list.get(position).getDesc());
         } else {
